@@ -9,7 +9,7 @@
     <a href="/latihan/index.php">Beranda</a>
     <a href="">Data Mahasiswa</a>
     <a href="/latihan/modul-jurusan/index.php">Data Jurusan</a>
-    <a href="">Data Dosen</a>
+    <a href="/latihan/modul-dosen/index.php">Data Dosen</a>
     <hr>
 </body>
 </html>
