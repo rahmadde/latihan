@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Jurusan
-
-    </title>
+    <title>Data Jurusan</title>
 </head>
 <body>
     <?php
@@ -15,7 +13,7 @@
     <h3>
         Data Jurusan
     </h3>
-    <a href="">
+    <a href="form.php">
         <button type="submit">Tambah Data</button>
     </a>
     <hr>
@@ -26,10 +24,21 @@
             <th>Nama Jurusan</th>
             <th>Action</th>
         </tr>
-        <tr">
-            <th>1</th>
-            <td>Kode</td>
-            <td>Jurusan</td>
+        <?php
+            include("../koneksi.php");
+
+            $tampil = "SELECT * FROM jurusans";
+
+            $proses = mysqli_query($koneksi, $tampil);
+
+            $nomor = 1;
+
+            foreach($proses as $data){
+        ?>
+        <tr>
+            <th><?= $nomor++ ?></th>
+            <td><?= $data['kode'] ?></td>
+            <td><?= $data['jurusan'] ?></td>
             <th>
                 <a href="">
                     <button type="submit">Edit</button>
@@ -37,6 +46,9 @@
                 </a>
             </th>
         </tr>
+        <?php
+            }
+        ?>
     </table>
 </body>
 </html>
