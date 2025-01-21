@@ -40,8 +40,10 @@
             <td><?= $data['kode'] ?></td>
             <td><?= $data['jurusan'] ?></td>
             <th>
-                <a href="">
+                <a href=''>
                     <button type="submit">Edit</button>
+                </a>
+                <a href='hapus.php?xyz=<?= $data['id'] ?>' onclick="return confirm('Yakin ingin menghapus data ini?')">
                     <button type="submit">Hapus</button>
                 </a>
             </th>
